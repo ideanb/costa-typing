@@ -1,0 +1,32 @@
+{
+  "easy": [
+    "Pluma",
+    "Vaina",
+    "Gindar",
+    "Foco",
+    "Mote",
+    "Eche",
+    "Nojoda",
+    "Boli",
+    "Jeva",
+    "Cumbia",
+    "guana"
+  ],
+  "medium": [
+    "Monocuco",
+    "Chevere",
+    "Julepe",
+    "Fundillo",
+    "Pechiche",
+    "Marimonda",
+    "Malanga"
+  ],
+  "hard": [
+    "Vascuencia",
+    "Perrenque",
+    "Fituplejo",
+    "Sorombatico",
+    "Mama que?, moto?",
+    "Espantajopo"
+  ]
+}
