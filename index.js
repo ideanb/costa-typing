@@ -16,30 +16,6 @@ const getWords = () => {
 };
 const wordList = getWords();
 
-//word entity
-const word = {
-  x: 0,
-  y: 0,
-  vx: 0,
-  text: "...",
-  direction: 1,
-  element: "",
-  create: function(x, y, vx, text) {
-    this.x = x;
-    this.y = y;
-    this.vx = vx;
-    this.text = text;
-    this.element = document.createElement("div");
-    this.element.innerHTML = `<span class="word">${this.text}</span>`;
-    document.querySelector("body").appendChild(this.element);
-    return this.element;
-  },
-  update: function() {
-    this.x += this.vx;
-    this.element.style.transform = `translate(${this.x}px, ${this.y}px)`;
-  }
-};
-
 //handle typing event
 const input = document.querySelector("input");
 input.addEventListener("keyup", function(event) {
@@ -76,8 +52,7 @@ const setWord = () => {
     }
   }
   const newWord = source[Math.floor(Math.random() * source.length)];
-  const newWordObj = Object.assign({}, word);
-  newWordObj.create(0, 0, 1, newWord);
+  const newWordObj = new Word(0, 0, 1, newWord);
   wordElements.push(newWordObj);
 };
 
@@ -88,7 +63,6 @@ const setWord = () => {
     loop();
   }, getRandomInt(2000, 5000));
 })();
-
 
 //Game loop
 const run = () => {
